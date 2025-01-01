@@ -2,6 +2,7 @@ const input = document.getElementById("unit-input");
 const conversionBtn = document.getElementById("conversion-btn");
 const lengthEl = document.getElementById("length-el");
 const volumeEl = document.getElementById("volume-el");
+const massEl = document.getElementById("mass-el");
 
 const conversionRates = {
   metersToFeet: 3.281,
@@ -26,7 +27,8 @@ function renderConversion(el, val, unit1, unit2) {
 }
 
 conversionBtn.addEventListener("click", function(){
- let value = input.value ? input.value : 0
-  renderConversion(lengthEl, value, "meters", "Feet")
-  renderConversion(volumeEl, value, "liters", "gallons")
+ let value = input.value ? input.value : 0;
+  renderConversion(lengthEl, value, "meters", "Feet");
+  renderConversion(volumeEl, value, "liters", "gallons");
+  renderConversion(massEl, value, "kilograms", "pounds");
 })

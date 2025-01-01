@@ -1,14 +1,15 @@
 const input = document.getElementById("unit-input");
 const conversionBtn = document.getElementById("conversion-btn");
 const lengthEl = document.getElementById("length-el");
+const volumeEl = document.getElementById("volume-el");
 
 const conversionRates = {
   metersToFeet: 3.281,
   feetToMeters: 1 / 3.281,
-  literToGallons: 0.264,
+  litersToGallons: 0.264,
   gallonsToLiters: 1 / 0.264,
-  kilogramToPound: 2.204,
-  poundToKilogram: 1 / 2.204
+  kilogramsToPounds: 2.204,
+  poundsToKilograms: 1 / 2.204
 };
 
 function imperialMetricConvert(value, unit1, unit2) {
@@ -27,4 +28,5 @@ function renderConversion(el, val, unit1, unit2) {
 conversionBtn.addEventListener("click", function(){
  let value = input.value ? input.value : 0
   renderConversion(lengthEl, value, "meters", "Feet")
+  renderConversion(volumeEl, value, "liters", "gallons")
 })

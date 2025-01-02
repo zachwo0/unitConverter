@@ -4,9 +4,57 @@
 
 body { 
   text-align: center;
+  background: #1F2937;
+  color: #fff;
 }
 
 header {
-  background: #6943FF;
+  background: #6943FF; 
+  height: 250px;
+  margin-bottom: 50px;
+  h1 {
+    padding-top: 30px;
+  }
+}
+
+#conversion-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    color: #CCC1FF;
+    margin-bottom: 20px;
+  }
+}
+
+#conversion-cards > section {
+  margin-bottom: 25px;
+  background: #273549;
+  width: 100%;
+  max-width: 600px;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+#input-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#unit-input {
+  margin: 20px;
+  background: none;
+  height: 20%;
   color: white;
+  font-size: 2rem;
+  text-align: center;
+  border: 2px solid #B295FF;
+  width: 10%;
+  border-radius: 10px;
+}
+
+#conversion-btn {
+  padding: 10px;
+  margin-top: 15px;
 }
